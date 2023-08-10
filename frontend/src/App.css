@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  min-width: 100vw;
+}
+
+.left-panel {
+  flex-grow: 1; /* This makes the left panel take up the rest of the space */
+}
+
+.right-panel {
+  flex: 0 0 300px; /* This makes the right panel always be 300px
+  /* flex-shrink: 0; */
+  width: 300px;  
+  overflow: auto;
+}

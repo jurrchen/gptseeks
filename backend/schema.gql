@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""message """
+type Message {
+  id: ID!
+  message: String!
+  sender: String
+  creation: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  messages: [Message!]!
+}
+
+type Mutation {
+  sendMessage(message: NewMessageInput!): Message!
+  clearAll: Int!
+}
+
+input NewMessageInput {
+  message: String!
+}
+
+type Subscription {
+  newMessage: Message!
+}
